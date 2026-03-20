@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   min-height: calc(100vh + 5vh);
-  background-color: #ffffff;
+  background-color: var(--background); 
   gap: 40px;
   padding: 20px;
 }
@@ -65,6 +65,12 @@ picture img {
   object-position: center;
   border-radius: 20px;
   display: block;
+  transition: all 0.3s ease-in-out; 
+}
+
+picture img:hover {
+  filter: brightness(50%);
+  transform: scale(1.01);
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,81 @@
+.catalog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #FFFEFE; 
+  padding: 100px 20px;
+  gap: 80px;
+  
+}
+
+.catalog-title {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.catalog-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 7vw, 4.2rem);
+  color: #2d2d2d;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin: 0;
+}
+
+.catalog-title h2 span {
+  color: var(--primary); /* Sua cor de destaque (ex: #B58863) */
+  font-style: italic;
+  font-weight: 400;
+}
+
+.catalog-title p {
+  font-size: 1.15rem;
+  color: #666;
+  max-width: 650px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Ajuste crucial para o novo layout dos cards --- */
+.cards {
+  display: flex;
+  flex-direction: column; /* Em vez de grid, usamos coluna */
+  gap: 100px; /* Espaçamento grande entre cada categoria/card */
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+}
+.cards-wrapper { 
+  display: flex;
+  flex-direction: column; /* No mobile, um embaixo do outro */
+  gap: 40px; /* Espaço entre os cards no mobile */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .cards-wrapper {
+    gap: 100px; /* Espaço maior no Desktop para um visual mais premium */
+    padding: 60px 0; /* Respiro extra no topo e base da seção */
+  }
+}
+
+/* Responsividade: No mobile, reduzimos os espaçamentos */
+@media (max-width: 768px) {
+  .catalog-container {
+    padding: 60px 20px;
+    gap: 50px;
+  }
+
+  .cards {
+    gap: 60px;
+  }
+}

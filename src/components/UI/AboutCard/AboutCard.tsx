@@ -1,4 +1,4 @@
-import "./Card.css";
+import "./AboutCard.css";
 
 type CardProps = {
   id: number;
@@ -7,7 +7,7 @@ type CardProps = {
   desc: string;
 };
 
-export function Card({ icon, title, desc }: CardProps) {
+export function AboutCard({ icon, title, desc }: CardProps) {
   return (
     <div className="meu-card">
       <div className="icone">{icon}</div>

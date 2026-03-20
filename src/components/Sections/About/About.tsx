@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card } from "../../UI/Card/Card";
+import { AboutCard } from "../../UI/AboutCard/AboutCard";
 import "./About.css";
 import { faHeart, faLeaf, faUser } from "@fortawesome/free-solid-svg-icons";
 import CupCakeImage from "../../../assets/cupcake-image.jpg";
@@ -52,7 +52,7 @@ export function About() {
         <div className="card-container">
           <div className="card-content">
             {CardAbout.map((item) => (
-              <Card
+              <AboutCard
                 key={item.id}
                 icon={item.icon}
                 title={item.title}
@@ -65,8 +65,8 @@ export function About() {
 
         <picture>
           <source media="(max-width: 768px)" src={CupCakeImage} />{" "}
-          {/* Fechou aqui */}
-          <img src={CupCakeImage} alt="Sobre mim" /> {/* Fechou aqui */}
+          
+          <img src={CupCakeImage} alt="Sobre mim" /> 
         </picture>
       </section>
     </>
