@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.app-container {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+h1 {
+  font-family: var(--font-heading);
+}
+
+.btn-whats {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: pulsar 2s ease-in-out infinite;
+}
+
+@media (max-width: 477px) {
+  .btn-whats {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+  }
+}
