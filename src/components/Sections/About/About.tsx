@@ -28,7 +28,7 @@ const CardAbout = [
 export function About() {
   return (
     <>
-      <section className="about-container">
+      <section  id="about" className="about-container">
         <div className="about-title">
           <h2>
             A <span>arte</span> da confeitaria francesa em cada doce

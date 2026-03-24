@@ -30,7 +30,7 @@
 }
 
 .catalog-title h2 span {
-  color: var(--primary); /* Sua cor de destaque (ex: #B58863) */
+  color: var(--primary);
   font-style: italic;
   font-weight: 400;
 }
@@ -43,19 +43,19 @@
   margin: 0;
 }
 
-/* --- Ajuste crucial para o novo layout dos cards --- */
+
 .cards {
   display: flex;
-  flex-direction: column; /* Em vez de grid, usamos coluna */
-  gap: 100px; /* Espaçamento grande entre cada categoria/card */
+  flex-direction: column; 
+  gap: 100px; 
   width: 100%;
   max-width: 1200px;
   margin-top: 40px;
 }
 .cards-wrapper { 
   display: flex;
-  flex-direction: column; /* No mobile, um embaixo do outro */
-  gap: 40px; /* Espaço entre os cards no mobile */
+  flex-direction: column; 
+  gap: 40px; 
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -63,12 +63,12 @@
 
 @media (min-width: 900px) {
   .cards-wrapper {
-    gap: 100px; /* Espaço maior no Desktop para um visual mais premium */
-    padding: 60px 0; /* Respiro extra no topo e base da seção */
+    gap: 100px; 
+    padding: 60px 0; 
   }
 }
 
-/* Responsividade: No mobile, reduzimos os espaçamentos */
+
 @media (max-width: 768px) {
   .catalog-container {
     padding: 60px 20px;

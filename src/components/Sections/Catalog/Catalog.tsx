@@ -42,7 +42,7 @@ const MyCatalog = [
 
 export function Catalog() {
   return (
-    <section className="catalog-container">
+    <section id="catalog" className="catalog-container">
       <div className="catalog-title">
         <h2>
           Nossos <span>Destaques</span>
