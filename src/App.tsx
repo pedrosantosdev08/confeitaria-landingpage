@@ -1,4 +1,4 @@
-import "./App.css";
+
 import { About } from "./components/Sections/About/About";
 import { Catalog } from "./components/Sections/Catalog/Catalog";
 import { Footer } from "./components/Sections/Footer/Footer";

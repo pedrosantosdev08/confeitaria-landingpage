@@ -1,44 +1,62 @@
-:root {
-  --font-size: 16px;
-  --background: #FDFBF7;
-  --foreground: #2C2416;
-  --card: #ffffff;
-  --card-foreground: #2C2416;
-  --popover: #ffffff;
-  --popover-foreground: #2C2416;
-  --primary: #C4795F;
-  --primary-foreground: #ffffff;
-  --secondary: #7B8370;
-  --secondary-foreground: #ffffff;
-  --muted: #F5EFE7;
-  --muted-foreground: #6B5E4F;
-  --accent: #D4A574;
-  --accent-foreground: #2C2416;
-  --destructive: #d4183d;
-  --destructive-foreground: #ffffff;
-  --border: rgba(123, 131, 112, 0.2);
-  --input: transparent;
-  --input-background: #F5EFE7;
-  --switch-background: #cbced4;
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --ring: #C4795F;
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+@import "tailwindcss";
+@import "tailwindcss/config";
+
+@theme {
+  /* Cores Personalizadas */
+  --color-primary: #c4795f;
+  --color-muted-foreground: #6b5e4f;
+
+  /* Fontes Personalizadas */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --keyframes-fade-in-up: {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  };
+
+  --animation-fade-in-up: fade-in-up 1.2s ease-out forwards;
+}
+
+/* Estilos Globais (Equivalente ao body e html) */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body overflow-x-hidden;
+  }
+
+  h1 {
+    @apply font-heading;
+  }
+}
+
+/* Componentes e Classes Utilitárias */
+@layer components {
   
-  /* Tipografia customizada */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  .btn-whats {
+    @apply fixed bottom-5 right-5 z-9999 
+           flex h-15 w-15 items-center justify-center 
+           rounded-full text-[#25d366] text-[25px] 
+           shadow-[0_4px_12px_rgba(0,0,0,0.2)] 
+           cursor-pointer transition-transform duration-300 
+           hover:scale-110;
+
+    
+    animation: pulsar 2s ease-in-out infinite;
+  }
+
+  /* Media query específica para o botão */
+  @media (max-width: 477px) {
+    .btn-whats {
+      @apply h-7.5 w-7.5 text-[20px];
+    }
+  }
 }
