@@ -32,7 +32,7 @@ const containerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // Atraso entre o surgimento de cada card
+      staggerChildren: 0.2, 
     },
   },
 };
@@ -49,7 +49,7 @@ const itemVariants: Variants = {
 export function Testimonials() {
   return (
     <section className="flex flex-col items-center gap-16 bg-[#F5EFE7] px-6 py-24 md:py-32">
-      {/* Título com animação simples de subida */}
+      
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export function Testimonials() {
         </p>
       </motion.div>
 
-      {/* Grid de Cards com Staggered Animation */}
+      
       <motion.div
         variants={containerVariants}
         initial="hidden"

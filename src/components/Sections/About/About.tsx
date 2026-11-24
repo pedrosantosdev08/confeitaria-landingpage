@@ -25,7 +25,7 @@ const CardAbout = [
   },
 ];
 
-// Variantes para o container pai
+
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -37,7 +37,7 @@ const containerVariants: Variants = {
   },
 };
 
-// Variantes para os itens (texto e cards)
+
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -47,7 +47,7 @@ const itemVariants: Variants = {
   },
 };
 
-// Variantes específica para a imagem (fade + scale)
+
 const imageVariants: Variants = {
   hidden: { opacity: 0, scale: 0.95 },
   visible: {
@@ -67,7 +67,7 @@ export function About() {
         viewport={{ once: true, amount: 0.2 }}
         className="mx-auto flex max-w-7xl flex-col items-center gap-16 md:gap-24"
       >
-        {/* Título e Texto */}
+      
         <div className="flex w-full flex-col items-center text-center">
           <motion.h2 
             variants={itemVariants}
@@ -101,7 +101,7 @@ export function About() {
           </motion.div>
         </div>
 
-        {/* Grid de Cards Animado */}
+     
         <motion.div 
           variants={itemVariants}
           className="flex w-full flex-wrap justify-center gap-8"
@@ -117,7 +117,7 @@ export function About() {
           ))}
         </motion.div>
 
-        {/* Imagem com Revelação Suave */}
+      
         <motion.picture 
           variants={imageVariants}
           className="w-full"

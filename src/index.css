@@ -1,12 +1,9 @@
 @import "tailwindcss";
 
-
 @theme {
-  /* Cores Personalizadas */
   --color-primary: #c4795f;
   --color-muted-foreground: #6b5e4f;
 
-  /* Fontes Personalizadas */
   --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
   --keyframes-fade-in-up: {
@@ -23,7 +20,6 @@
   --animation-fade-in-up: fade-in-up 1.2s ease-out forwards;
 }
 
-/* Estilos Globais (Equivalente ao body e html) */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -38,9 +34,7 @@
   }
 }
 
-/* Componentes e Classes Utilitárias */
 @layer components {
-  
   .btn-whats {
     @apply fixed bottom-5 right-5 z-9999 
            flex h-15 w-15 items-center justify-center 
@@ -49,7 +43,6 @@
            cursor-pointer transition-transform duration-300 
            hover:scale-110;
 
-    
     animation: pulsar 2s ease-in-out infinite;
   }
 

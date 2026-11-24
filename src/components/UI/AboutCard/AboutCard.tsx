@@ -9,8 +9,8 @@ export function AboutCard({ icon, title, desc }: CardProps) {
   return (
     <div className="
       flex flex-1 flex-col gap-4 
-      min-w-[300px] max-w-[380px] 
-      rounded-[16px] border border-[#e2e8f0] bg-[var(--muted)] p-8 
+      min-w-75 max-w-95 
+      rounded-2xl border border-[#e2e8f0] bg-(--muted) p-8 
       transition-all duration-300 ease-in-out 
       hover:-translate-y-2 hover:shadow-[0_12px_24px_rgba(0,0,0,0.247)]
     ">
@@ -20,7 +20,7 @@ export function AboutCard({ icon, title, desc }: CardProps) {
       </div>
 
       {/* Título */}
-      <h3 className="m-0 font-heading text-[1.5rem] text-[var(--text-dark)]">
+      <h3 className="m-0 font-heading text-[1.5rem] text-(--text-dark)">
         {title}
       </h3>
 

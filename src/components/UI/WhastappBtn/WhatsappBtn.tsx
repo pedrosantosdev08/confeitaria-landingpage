@@ -21,7 +21,7 @@ export function WhatsappBtn() {
         transition-all duration-300 ease-out
         hover:scale-110 hover:shadow-[0_6px_16px_rgba(0,0,0,0.2)]
         animate-pulsar
-        max-[477px]:h-[40px] max-[477px]:w-[40px]
+        max-[477px]:h-10 max-[477px]:w-10
         group
       "
     >
